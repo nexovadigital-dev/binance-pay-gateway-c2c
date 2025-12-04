@@ -2,7 +2,7 @@
 
 **Plugin de Pagos Automatizados en Criptomonedas para WooCommerce**
 
-![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)
 ![WordPress](https://img.shields.io/badge/WordPress-6.0+-green.svg)
 ![WooCommerce](https://img.shields.io/badge/WooCommerce-6.0+-purple.svg)
 ![PHP](https://img.shields.io/badge/PHP-7.4+-blue.svg)
@@ -164,6 +164,13 @@ Los comprobantes de pago se almacenan en una carpeta privada:
 ---
 
 ## 🆕 Changelog
+
+### Version 3.0.1 (2025-12-04)
+- 🔧 **CORRECCIÓN**: .htaccess ajustado para permitir acceso directo a comprobantes de pago
+- ✨ **MEJORA**: UX del modal de subida de comprobante mejorada significativamente
+- ✨ **MEJORA**: Formulario se oculta automáticamente tras subida exitosa
+- ✨ **MEJORA**: Mensaje de confirmación más claro con redirección a detalles de orden
+- 🎨 **MEJORA**: Flujo visual más intuitivo en reportes manuales
 
 ### Version 3.0.0 (2025-12-04)
 - ✨ **NUEVO**: Gestión privada de comprobantes de pago

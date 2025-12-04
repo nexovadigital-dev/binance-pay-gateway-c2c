@@ -22,7 +22,7 @@ class Binance_File_Handler {
         if (!file_exists($custom_dir)) {
             wp_mkdir_p($custom_dir);
 
-            $htaccess_content = "Options -Indexes\n<Files *>\n    Order Allow,Deny\n    Deny from all\n</Files>";
+            $htaccess_content = "Options -Indexes";
             file_put_contents($custom_dir . '/.htaccess', $htaccess_content);
 
             file_put_contents($custom_dir . '/index.php', '<?php // Silence is golden');
