@@ -222,19 +222,21 @@ class Binance_API_Handler {
             return new WP_REST_Response(['message' => __('Por favor, selecciona la moneda usada (USDT o USDC).', 'c2c-crypto-payments')], 400);
         }
 
-        $attachment = Binance_File_Handler::handle_upload($files['receipt'], $order->get_id());
-        if (is_wp_error($attachment)) {
-            return new WP_REST_Response(['message' => $attachment->get_error_message()], 500);
+        $file_data = Binance_File_Handler::handle_upload($files['receipt'], $order->get_id());
+        if (is_wp_error($file_data)) {
+            return new WP_REST_Response(['message' => $file_data->get_error_message()], 500);
         }
 
         $order->update_meta_data('_binance_manual_order_id', $binance_order_id);
         $order->update_meta_data('_binance_manual_currency', $paid_currency);
-        $order->update_meta_data('_binance_receipt_attachment_id', $attachment);
+        $order->update_meta_data('_binance_receipt_file_url', $file_data['file_url']);
+        $order->update_meta_data('_binance_receipt_file_path', $file_data['file_path']);
+        $order->update_meta_data('_binance_receipt_filename', $file_data['filename']);
         $order->update_status('on-hold', __('Cliente subió un comprobante de pago para verificación manual.', 'c2c-crypto-payments'));
 
         $order_note = sprintf(
             __('Comprobante subido por el cliente. <a href="%s" target="_blank">Ver Comprobante</a>', 'c2c-crypto-payments'),
-            wp_get_attachment_url($attachment)
+            esc_url($file_data['file_url'])
         );
         $order->add_order_note($order_note);
         $order->save();

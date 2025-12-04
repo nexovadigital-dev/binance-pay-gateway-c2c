@@ -55,13 +55,10 @@ class WC_Email_Binance_Admin_Manual extends WC_Email {
      */
     public function attach_payment_receipt($attachments, $email_id, $order) {
         if ($this->id === $email_id && $order instanceof WC_Order) {
-            $attachment_id = $order->get_meta('_binance_receipt_attachment_id');
+            $file_path = $order->get_meta('_binance_receipt_file_path');
 
-            if ($attachment_id) {
-                $file_path = get_attached_file($attachment_id);
-                if ($file_path && file_exists($file_path)) {
-                    $attachments[] = $file_path;
-                }
+            if ($file_path && file_exists($file_path)) {
+                $attachments[] = $file_path;
             }
         }
         return $attachments;
