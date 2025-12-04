@@ -179,6 +179,39 @@ Los comprobantes de pago se almacenan en una carpeta privada:
 
 ---
 
+## 🚀 Roadmap - Próximas Actualizaciones
+
+### Planificado para Version 3.1.0
+
+#### 🔍 Verificación Automática Mejorada
+- **Búsqueda por Order ID**: Verificación automática de pagos usando el Order ID de Binance cuando el cliente olvide colocar la nota de pago
+- **Sistema de fallback inteligente**: Si no se encuentra el pago por nota, el sistema buscará automáticamente por Order ID
+- **Reducción de verificaciones manuales**: Menos intervención del administrador
+
+#### 🎨 Personalización del Checkout
+- **Editor de paleta de colores**: Personaliza los colores del checkout de pago desde el panel de administración
+- **Colores personalizables**:
+  - Color primario (botones, enlaces)
+  - Color secundario (fondos, bordes)
+  - Color de acentos (alertas, notificaciones)
+  - Color de texto
+- **Vista previa en tiempo real**: Ve los cambios antes de aplicarlos
+- **Temas predefinidos**: Plantillas de colores listas para usar
+- **Compatibilidad con tu marca**: Adapta el checkout a la identidad visual de tu tienda
+
+#### 🔔 Otras Mejoras en Consideración
+- Notificaciones push para administradores
+- Reportes y estadísticas de pagos
+- Soporte para más criptomonedas
+- Integración con más wallets
+
+### ¿Tienes una sugerencia?
+
+Si tienes ideas para mejorar el plugin, ¡contáctanos! Tu feedback es muy valioso:
+📱 [WhatsApp - Nexova Digital Solutions](https://wa.me/message/GXMDON7MEALCG1)
+
+---
+
 ## 📞 Soporte
 
 ### Contacto Nexova Digital Solutions
