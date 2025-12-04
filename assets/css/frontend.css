@@ -1,0 +1,29 @@
+/*
+ */
+
+
+.wc_payment_method.payment_method_binance_pay_c2c .payment_box img {
+    max-width: 120px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 10px auto !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.wc_payment_method.payment_method_binance_pay_c2c > label img {
+    height: 32px !important;
+    width: 32px !important;
+    vertical-align: middle !important;
+    margin-left: 10px !important;
+    display: inline-block !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.wc-block-components-payment-method-label img {
+    height: 32px !important;
+    width: 32px !important;
+    margin-left: 10px !important;
+    vertical-align: middle !important;
+}

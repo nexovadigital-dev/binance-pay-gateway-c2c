@@ -1,0 +1,27 @@
+#binance-admin-hub .binance-tab-content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    margin-top: -1px;
+}
+#binance-admin-hub .binance-tab-content.active {
+    display: block;
+}
+#binance-admin-hub .binance-tab-content {
+    display: none;
+}
+#binance-admin-hub .nav-tab-wrapper {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0;
+}
+#binance-admin-hub .nav-tab {
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;/
+    margin-bottom: -1px;
+}
+#binance-admin-hub .nav-tab-active {
+    background: #fff;
+    border-bottom-color: #fff;
+}
