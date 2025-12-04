@@ -71,14 +71,13 @@ class Binance_Order_Meta {
             return;
         }
 
-        $receipt_id = $order->get_meta('_binance_receipt_attachment_id');
+        $receipt_url = $order->get_meta('_binance_receipt_file_url');
         $transaction_id = $order->get_transaction_id();
         $manual_order_id = $order->get_meta('_binance_manual_order_id');
 
         echo '<div id="binance-verification-box">';
 
-        if ($receipt_id) {
-            $receipt_url = wp_get_attachment_url($receipt_id);
+        if ($receipt_url) {
             $manual_currency = $order->get_meta('_binance_manual_currency');
             ?>
             <p><strong><?php _e('Nota de Pago Binance Esperada:', 'c2c-crypto-payments'); ?></strong><br><?php echo esc_html($order->get_meta('_binance_payment_note')); ?></p>
