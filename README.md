@@ -2,7 +2,7 @@
 
 **Plugin de Pagos Automatizados en Criptomonedas para WooCommerce**
 
-![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.2-blue.svg)
 ![WordPress](https://img.shields.io/badge/WordPress-6.0+-green.svg)
 ![WooCommerce](https://img.shields.io/badge/WooCommerce-6.0+-purple.svg)
 ![PHP](https://img.shields.io/badge/PHP-7.4+-blue.svg)
@@ -148,11 +148,12 @@ binance-pay-gateway-c2c/
 
 ### Gestión Privada de Comprobantes
 
-Los comprobantes de pago se almacenan en una carpeta privada:
+Los comprobantes de pago se almacenan en una carpeta organizada:
 - **Ubicación**: `/wp-content/uploads/binance-c2c-private/`
-- **Protección**: Archivos `.htaccess` y `index.php` para evitar acceso directo
+- **Protección**: Archivo `index.php` previene listado de directorios
 - **Visibilidad**: NO aparecen en el gestor multimedia de WordPress
-- **Acceso**: Solo administradores mediante enlaces internos
+- **Acceso**: Archivos accesibles mediante URL directa (necesario para administradores)
+- **Privacidad**: La carpeta no es indexable pero los archivos son accesibles con la URL exacta
 
 ### Validación de Archivos
 
@@ -164,6 +165,12 @@ Los comprobantes de pago se almacenan en una carpeta privada:
 ---
 
 ## 🆕 Changelog
+
+### Version 3.0.2 (2025-12-04)
+- 🔧 **CORRECCIÓN CRÍTICA**: Eliminado .htaccess completamente para resolver error 403
+- ✅ **RESUELTO**: Comprobantes ahora accesibles sin restricciones
+- 🔐 **SEGURIDAD**: Carpeta protegida solo con index.php (previene listado de directorios)
+- ⚡ **MEJORA**: Acceso directo a archivos garantizado en todos los hostings
 
 ### Version 3.0.1 (2025-12-04)
 - 🔧 **CORRECCIÓN**: .htaccess ajustado para permitir acceso directo a comprobantes de pago
