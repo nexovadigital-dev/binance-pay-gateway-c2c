@@ -331,22 +331,25 @@ class Binance_Shortcode_Page {
                         })
                         .then(function(result) {
                             spinnerEl.style.display = 'none';
-                            uploadBtnEl.disabled = false;
-                            uploadBtnEl.style.opacity = '1';
-                            uploadBtnEl.textContent = '<?php _e('Subir Comprobante', 'c2c-crypto-payments'); ?>';
-                            
+
                             if(result.ok) {
-                                showModal(icons.success, i18n.receiptUploaded, '');
-                                redirect(config.orderReceivedUrl, i18n.paymentUnderReview);
-                            } else { 
-                                statusEl.textContent = i18n.uploadFailed + ': ' + result.data.message; 
+                                formEl.style.display = 'none';
+                                ui.modalIcon.innerHTML = icons.success;
+                                ui.modalTitle.textContent = i18n.receiptUploaded;
+                                ui.modalMessage.innerHTML = '<div style="margin: 20px 0;"><p style="font-size: 1.1em; margin-bottom: 15px;">' + i18n.paymentUnderReview + '</p><p style="color: var(--b-text); font-size: 0.95em;">Los administradores revisarán tu comprobante pronto y actualizarán el estado de tu orden.</p></div>';
+                                redirect(config.orderReceivedUrl, '');
+                            } else {
+                                uploadBtnEl.disabled = false;
+                                uploadBtnEl.style.opacity = '1';
+                                uploadBtnEl.textContent = '<?php _e('Subir Comprobante', 'c2c-crypto-payments'); ?>';
+                                statusEl.textContent = i18n.uploadFailed + ': ' + result.data.message;
                             }
-                        }).catch(function() { 
+                        }).catch(function() {
                             spinnerEl.style.display = 'none';
                             uploadBtnEl.disabled = false;
                             uploadBtnEl.style.opacity = '1';
                             uploadBtnEl.textContent = '<?php _e('Subir Comprobante', 'c2c-crypto-payments'); ?>';
-                            statusEl.textContent = i18n.errorOccurred; 
+                            statusEl.textContent = i18n.errorOccurred;
                         });
                     };
                 };

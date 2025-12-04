@@ -3,7 +3,7 @@
 * Plugin Name:       Binance C2C Autopayments for WooCommerce
 * Plugin URI:        https://wa.me/message/GXMDON7MEALCG1
 * Description:       Recibe pagos automatizados y manuales en USDT y USDC con Binance Pay C2C.
-* Version:           3.0.0
+* Version:           3.0.2
 * Author:            Nexova Digital Solutions
 * Author URI:        https://wa.me/message/GXMDON7MEALCG1
 * License:           GPL-2.0+
@@ -52,7 +52,7 @@
 if (!defined('ABSPATH')) exit;
 
 define('C2C_CRYPTO_PLUGIN_FILE', __FILE__);
-define('C2C_CRYPTO_PLUGIN_VERSION', '3.0.0');
+define('C2C_CRYPTO_PLUGIN_VERSION', '3.0.2');
 
 function c2c_check_woocommerce_dependency() {
     if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
@@ -113,7 +113,7 @@ if ( ! function_exists( 'init_c2c_crypto_gateway_plugin' ) ) {
 function c2c_crypto_register_block_scripts() {
     $script_asset_path = plugin_dir_path(C2C_CRYPTO_PLUGIN_FILE) . 'assets/js/block-checkout.asset.php';
     $script_url = plugin_dir_url(C2C_CRYPTO_PLUGIN_FILE) . 'assets/js/block-checkout.js';
-    $version = '3.0.0';
+    $version = '3.0.2';
 
     if ( file_exists( $script_asset_path ) ) {
         $script_asset = require $script_asset_path;
